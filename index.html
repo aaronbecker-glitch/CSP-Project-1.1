@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Castle Card</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="castle-bg" aria-hidden="true">
+      <div class="castle-wall"></div>
+      <div class="castle-tower tower-left"></div>
+      <div class="castle-tower tower-middle"></div>
+      <div class="castle-tower tower-right"></div>
+    </div>
+
+    <div class="card-content">
+      <h1>Welcome to the Castle!</h1>
+      <p>You are brave, creative, and capable.</p>
+
+      <!-- The menu is the first screen; JavaScript switches to the selected game. -->
+      <section id="game-menu" aria-labelledby="game-menu-title">
+        <h2 id="game-menu-title">Game Menu</h2>
+        <ul>
+          <li><a href="#quiz">Take Quiz</a></li>
+          <li><a href="#reaction-game">Reaction Game</a></li>
+        </ul>
+      </section>
+
+      <!-- hidden keeps the quiz out of view until the player chooses it. -->
+      <section id="quiz" aria-labelledby="quiz-title" hidden>
+        <h2 id="quiz-title">Quiz Game</h2>
+        <h3 id="question"></h3>
+        <div id="answers"></div>
+        <p id="feedback" aria-live="polite"></p>
+        <button id="next-button" type="button">Next Question</button>
+        <button id="quiz-menu-button" type="button">Back to games</button>
+      </section>
+
+      <!-- The reaction game starts with its button ready to begin a test. -->
+      <section id="reaction-game" aria-labelledby="reaction-title" hidden>
+        <h2 id="reaction-title">Reaction Game</h2>
+        <p id="reaction-instructions">Press start, then click only when the button turns green.</p>
+        <button id="reaction-button" type="button">Start reaction test</button>
+        <p id="reaction-time" aria-live="polite"></p>
+        <button id="reaction-menu-button" type="button">Back to games</button>
+      </section>
+    </div>
+    </main>
+<script src="Script.js" defer></script>
+
+</body>
+</html>
